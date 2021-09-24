@@ -33,9 +33,6 @@ const onUnmounted = (el) => {
 };
 
 const onUpdated = (el, binding, vnode) => {
-  if (binding.value === binding.oldValue) {
-    return;
-  }
   onMounted(el, binding, vnode);
 };
 

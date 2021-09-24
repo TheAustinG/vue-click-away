@@ -29,10 +29,6 @@ const onUnmounted = function (el) {
 };
 
 const onUpdated = function (el, binding, vnode) {
-  if (binding.value === binding.oldValue) {
-    return;
-  }
-
   onMounted(el, binding, vnode);
 };
 
@@ -52,7 +48,7 @@ const mixin = {
   }
 };
 
-exports.default = plugin;
+exports["default"] = plugin;
 exports.directive = directive;
 exports.mixin = mixin;
 //# sourceMappingURL=common.js.map
